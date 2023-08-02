@@ -89,11 +89,11 @@ const app = !admin.apps.length ? admin.initializeApp({
 }) : admin.app();
 
 import Stripe from 'stripe';
-const stripe = new Stripe('sk_test_51MZqf4Jnn5oxBd4TuplPTb7Npwvv78nwfucQZpOGbBrM3N3DE8sxiqtXBvFXoown68gnbLZgu8LihW5akdbdOzXL00CapLmLq6', {
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
     apiVersion: '2020-08-27'
 });
 
-const endpointSecret = 'whsec_kKTbaJUgLH9otB1MEwl6qLx7IE3999D5';
+const endpointSecret = process.env.STRIPE_SIGNING_SECRET;
 
 const fulfillOrder = async (session) => {
     try {
