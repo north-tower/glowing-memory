@@ -8,7 +8,7 @@ import { selectItems, selectTotal } from '@/slices/basketSlice'
 import CheckoutProduct from '@/components/CheckoutProduct'
 import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
-const stripePromise = loadStripe('sk_test_51MZqf4Jnn5oxBd4TuplPTb7Npwvv78nwfucQZpOGbBrM3N3DE8sxiqtXBvFXoown68gnbLZgu8LihW5akdbdOzXL00CapLmLq6');
+const stripePromise = loadStripe(process.env.stripe_public_key);
 
 function checkout() {
     const items = useSelector(selectItems);
@@ -75,7 +75,7 @@ function checkout() {
                             {total}
                         </span>
                         </h2>
-                        <button role="link" onClick={createCheckoutSession}  className={`button mt-2 ${!session && "from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed"}`}>
+                        <button role="link" onClick={createCheckoutSession} disabled={!session} className={`button mt-2 ${!session && "from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed"}`}>
                             {!session ? "Sign in to checkout" : "Proceed to checkout"}
                         </button>
                     </>
