@@ -31,41 +31,28 @@ export default function Product({id, title, price, description , category, image
     };
 
     return (
-    <div className='relative flex flex-col m-5 bg-white z-30 p-10 rounded-md'>
-        <p className='absolute top-2 right-2 text-xs italic text-gray-400'>{category }</p>
-
-        <Image 
-        src={image} 
-        height={200}
-         width={200}  />
-
-        <h4 className='my-3'>{title}</h4>
-
-        <div className='flex'>
-            {Array(rating)
-            .fill()
-            .map((_,i) => (
-                <StarIcon className='h-5 text-yellow-500' />
-            ))}
-
-        </div>
-        
-        <p className='text-xs my-2 line-clamp-2'>{description}</p>
-
-        <div className='mb-5'>
-          KES {price}
-             
-        </div>
-
-            {hasPrime && (
-                <div className='flex items-center space-x-2 -mt-5'>
-                    <img className='w-12' src='https://links.papareact.com/fdw' alt='' />
-                    <p className='text-xs text-gray-500'>FREE Next-day Delivery</p>
+        <div class="flex flex-wrap justify-between pt-6 -mx-6 p-3">
+            
+    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                        <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                            <Image src={image} class="w-full rounded-t pb-6" width={200} height={200} />
+                            <p class="w-full text-gray-600 text-xs md:text-sm px-6">{category}</p>
+                           
+                            <div class="w-full font-bold text-xl text-gray-900 px-6">{title}</div>
+                            <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                                {description}
+                            </p>
+                        </a>
+                    </div>
+                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                        <div class="flex items-center justify-between">
+                            <p class="text-gray-600 text-xs md:text-sm">2YEARS AGO</p>
+                        </div>
+                    </div>
+                    
                 </div>
-            )}
-
-            <button onClick={addItemToBasket} className='mt-auto button'>Add to Basket</button>
-        </div>
+                </div>
         
   
   )
