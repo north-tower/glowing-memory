@@ -23,10 +23,7 @@ export default function Home({ products }) {
 
       <main className='max-w-screen-lg mx-auto'>
         <Banner />
-        <h2 className='z-0'>
-        Recent Projects
-
-        </h2>
+        <h3 className='text-3xl m-3'>Recent Projects</h3>
       
         <ProductFeed products={products} />
       </main>
