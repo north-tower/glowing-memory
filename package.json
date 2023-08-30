@@ -19,6 +19,7 @@
     "expo-location": "^15.1.1",
     "firebase": "^9.19.1",
     "firebase-admin": "^11.5.0",
+    "flowbite": "^1.8.1",
     "geolib": "^3.3.3",
     "mapbox-gl": "^2.14.1",
     "micro": "^10.0.1",
