@@ -1,6 +1,7 @@
 module.exports = {
   mode: "jit",
   purge: [
+    
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
@@ -19,7 +20,11 @@ module.exports = {
     extend: {},
   },
   content: [
-    "./node_modules/flowbite/**/*.js"
+    "./node_modules/flowbite-react/**/*.js",
+    "./src/pages/**/*.{js,jsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+
+    "./public/**/*.html",
 ],
   plugins: [require("@tailwindcss/line-clamp"),require('flowbite/plugin')],
 };

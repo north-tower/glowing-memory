@@ -1,10 +1,22 @@
 import React from 'react'
 import Header from '@/components/Header'
 import { useRouter } from 'next/router';
+import Footer from '@/components/Footer';
+import Image from 'next/image';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import productFeed from '@/components/ProductFeed';
+import ProductFeed from '@/components/ProductFeed';
 
-function ProjectPage() {
+
+function ProjectPage({ products }) {
     const router = useRouter()
     const projectId = router.query.projectId;
+    const projectIdNumber = parseInt(projectId)
+
+    const specificProduct = products.find(product => product.id === projectIdNumber);
+
+
 
   return (
     <div className=''>
@@ -16,12 +28,11 @@ function ProjectPage() {
     </p>
     <div class=" p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{projectId}</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{specificProduct.title}</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Carlsche Limited undertook the "Mukungugu water project" project in collaboration with the Ministry of water, sanitation and irrigation
-            to address the growing water supply challenges faced by the community. This ambitious project aimed to enhance the region's water infrastructure, ensuring a sustainable and 
-            reliable water supply for current and future generations               .</p>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{specificProduct.description}</p>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 
+        focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Read more
             <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
@@ -94,9 +105,79 @@ function ProjectPage() {
             .</p>
     </li>
 </ol>
+
+   
+<p class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl p-3 m-2 " href="#" id="Gallery">
+    Gallery
+</p>
+
+
+     
+
+               
+            
+<div className='relative'>
+      <div className='absolute w-full h-16 bg-gradient-to-t from-gray-100 to-transparent bottom-0 z-20' />
+      <Carousel
+        autoPlay
+        infiniteLoop
+        showStatus={false}
+        showIndicators={false}
+        showThumbs={false}
+        interval={5000}
+      >
+        <div className='relative'>
+          <img loading='lazy' src='https://i.postimg.cc/9MWNWPPZ/7.jpg' alt='' />
+         
+        </div>
+
+        <div className='relative'>
+          <img loading='lazy' src='https://i.postimg.cc/XYf8pGY8/19.jpg' alt='' />
+         
+        </div>
+
+        <div className='relative'>
+          <img loading='lazy' src='https://i.postimg.cc/qvVwJX4q/16.jpg' alt='' />
+          
+        </div>
+      </Carousel>
     </div>
+
+    <p class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl p-3 m-2 flex justify-center" href="#" id="Gallery">
+        Simillar Projects
+    </p>
+
+    {/* {products.map(({id, title, description, image})=>(
+        <div class="max-w-full m-3 flex justify-center">
+    <a href="#" class="flex flex-col  items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <Image class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-md md:rounded-l-lg" src={image} width={400} height={600} alt="" />
+        <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+        </div>
+    </a>
+   </div>
+    ))} */}
+    <ProductFeed products={products}/>
+   
+ 
+
     </div>
+    <Footer />
+    </div>
+    
   )
 }
 
 export default ProjectPage
+export async function getServerSideProps(context) {
+  
+    const products = await fetch("https://www.jsonkeeper.com/b/KZR6").then(
+      (res) => res.json()
+    );
+      return {
+        props : {
+        products
+      },
+    };
+  }

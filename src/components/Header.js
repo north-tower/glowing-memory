@@ -17,11 +17,11 @@ function Header() {
 
   return (
    
-<nav class="bg-white border-gray-200 dark:bg-red-500 dark:border-gray-700">
+<nav class="bg-white border-gray-200 dark:bg-white dark:border-gray-700" >
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="#" class="flex items-center">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CARLSCHE Limited</span>
+    <a href="#" class="flex items-center" onClick={() => router.push("/")}>
+        <img src="https://carlsche.co.ke/wp-content/uploads/2023/08/cropped-mylogo.png" class="h-16 mr-3" alt="Flowbite Logo" />
+        
     </a>
     <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg
      md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
@@ -32,25 +32,25 @@ function Header() {
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
       <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 
-      md:border-0 md:bg-white dark:bg-red-500 md:dark:bg-red-500 dark:border-red-700">
+      md:border-0 md:bg-white dark:bg-white md:dark:bg-white dark:border-red-700">
         <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-black
-           md:p-0 md:dark:text-dark md:dark:bg-transparent" aria-current="page">Home</a>
+          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-red-500
+           md:p-0 md:dark:text-red-500 md:dark:bg-transparent" aria-current="page">Home</a>
         </li>
        
         <li>
           <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:dark
-          md:p-0 dark:text-white
-           md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+          md:p-0 dark:text-black
+           md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
         </li>
         <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-dark
-           md:p-0 dark:text-white
-           md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-500
+           md:p-0 dark:text-black
+           md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
         </li>
         <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-dark md:p-0 dark:text-white 
-          md:dark:hover:text-black sdark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-500 md:p-0 dark:text-black
+          md:dark:hover:text-red-500 sdark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
         </li>
       </ul>
     </div>

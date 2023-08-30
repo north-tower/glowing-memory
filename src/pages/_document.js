@@ -8,6 +8,8 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
     </Html>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import Product from './Product';
 
 
-export default function productFeed({ products }) {
+export default function ProductFeed({ products }) {
   return (
     <div className='grid grid-flow-row-dense md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  mx-auto'>   
      

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Description() {
   return (
-    <div className='max-'>
+    <div className=''>
         <div class="carousel relative container mx-auto m-5"  >
     <p class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl p-3 m-2 " href="#">
         Project Description
