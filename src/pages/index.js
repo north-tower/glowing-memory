@@ -15,7 +15,7 @@ import Stats from '@/components/Stats'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ products }) {
+export default function Home({ products, projects }) {
   return (
     <div className='bg-gray-100 '>
       <Head>
@@ -32,7 +32,7 @@ export default function Home({ products }) {
 
         <h3 className='text-3xl m-3'>Ongoing Projects</h3>
       
-      <OnProject products={products} />
+      <OnProject projects={projects} />
       <h3 className='text-3xl m-3'>About Us</h3>
 
       <Stats />
@@ -49,13 +49,16 @@ export default function Home({ products }) {
 
 
 export async function getServerSideProps(context) {
-  const session = await getSession(context);
+
   const products = await fetch("https://www.jsonkeeper.com/b/KZR6").then(
+    (res) => res.json()
+  );
+  const projects = await fetch("https://jsonkeeper.com/b/7HAA").then(
     (res) => res.json()
   );
     return {
       props : {
-      products,session
+      products, projects
     },
   };
 }
