@@ -12,6 +12,8 @@ import Title from '@/components/Team'
 import OnProject from '@/components/OnProject'
 import Team from '@/components/Team'
 import Stats from '@/components/Stats'
+import LargeCard from '@/components/LargeCard'
+import Services from '@/components/Services'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,12 +26,23 @@ export default function Home({ products, projects }) {
       
       <Header />
 
-
-      <main className='max-w-screen-lg mx-auto'>
       <Banner />
-      <h3 className='text-3xl m-3'>About Us</h3>
 
-<Stats />
+      <section className='max-w-screen-lg mx-auto'>
+        <h3 className='text-3xl m-3 '>About Us</h3>
+          <Stats />
+      </section>
+      <LargeCard img="https://links.papareact.com/4cj" 
+        title="Lets Make Your Dream House With Our Professionals
+        "
+        description="Wishlists curated by Carlsche"
+        buttonText="Start a project" />
+
+      <section className='max-w-screen-lg mx-auto'>
+      <h3 className='text-3xl m-3 '>Our Services</h3>
+
+        <Services />
+
         
         <h3 className='text-3xl m-3'>Recent Projects</h3>
       
@@ -43,7 +56,7 @@ export default function Home({ products, projects }) {
 
       <Team />
 
-      </main>
+      </section>
 
       <Footer />
     </div>

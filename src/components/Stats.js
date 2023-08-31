@@ -31,48 +31,61 @@ function Stats() {
             </a>
         </div>
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="services" role="tabpanel" aria-labelledby="services-tab">
-            <h2 class="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">We invest in the world’s potential</h2>
+            <h2 class="mb-5 text-2xl  tracking-tight text-gray-900 dark:text-white">We invest in the world’s potential</h2>
            
             <ul role="list" class="space-y-4 text-gray-500 dark:text-gray-400">
                 <li class="flex space-x-2 items-center">
                     <svg class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                     </svg>
-                    <span class="leading-tight">Dynamic reports and dashboards</span>
+                    <span class="leading-tight">Construction works</span>
                 </li>
                 <li class="flex space-x-2 items-center">
                     <svg class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                     </svg>
-                    <span class="leading-tight">Templates for everyone</span>
+                    <span class="leading-tight">Roads</span>
                 </li>
                 <li class="flex space-x-2 items-center">
                     <svg class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                     </svg>
-                    <span class="leading-tight">Development workflow</span>
+                    <span class="leading-tight">Drainage</span>
                 </li>
                 <li class="flex space-x-2 items-center">
                     <svg class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                     </svg>
-                    <span class="leading-tight">Limitless business automation</span>
+                    <span class="leading-tight">Carpeting and maintaince of roads</span>
                 </li>
             </ul>
         </div>
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="statistics" role="tabpanel" aria-labelledby="statistics-tab">
             <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
-                <div class="flex flex-col">
-                    <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Developers</dd>
+            <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl ">100+</dt>
+                    <dd class="text-gray-500 dark:text-gray-400">Projects</dd>
                 </div>
-                <div class="flex flex-col">
-                    <dt class="mb-2 text-3xl font-extrabold">100M+</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Public repositories</dd>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl ">1000+</dt>
+                    <dd class="text-gray-500 dark:text-gray-400">Workers</dd>
                 </div>
-                <div class="flex flex-col">
-                    <dt class="mb-2 text-3xl font-extrabold">1000s</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Open source projects</dd>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl ">1000s</dt>
+                    <dd class="text-gray-500 dark:text-gray-400">Machinery</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl ">10s</dt>
+                    <dd class="text-gray-500 dark:text-gray-400">Engineers</dd>
+                </div>
+                
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl ">90%+</dt>
+                    <dd class="text-gray-500 dark:text-gray-400">Eco-friendly</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl ">90%+</dt>
+                    <dd class="text-gray-500 dark:text-gray-400">Eco-friendly</dd>
                 </div>
             </dl>
         </div>
