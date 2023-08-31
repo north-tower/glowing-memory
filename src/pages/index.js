@@ -23,9 +23,10 @@ export default function Home({ products, projects }) {
       </Head>
       
       <Header />
+      <Banner />
 
       <main className='max-w-screen-lg mx-auto'>
-        <Banner />
+        
         <h3 className='text-3xl m-3'>Recent Projects</h3>
       
         <ProductFeed products={products} />
@@ -53,7 +54,7 @@ export async function getServerSideProps(context) {
   const products = await fetch("https://www.jsonkeeper.com/b/KZR6").then(
     (res) => res.json()
   );
-  const projects = await fetch("https://jsonkeeper.com/b/7HAA").then(
+  const projects = await fetch("https://www.jsonkeeper.com/b/KZR6").then(
     (res) => res.json()
   );
     return {
