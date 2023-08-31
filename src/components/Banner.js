@@ -43,14 +43,14 @@ function Banner() {
             </div>
           </div>
 
-          {/* <div className='relative'>
+          <div className='relative'>
             <img loading='lazy' src=' https://i.postimg.cc/GhdSQ5j7/shane-mclendon-9j-PJrf-LTBi0-unsplash.jpg' alt='' />
             <div className='absolute top-0 right-0 bg-black text-white p-2'>
               Text Here
             </div>
-          </div> */}
+          </div> 
 
-          {/* <div className='relative'>
+         {/* <div className='relative'>
 
             <img loading='lazy' src='https://i.postimg.cc/hPjH9YsL/troy-mortier-rns-F0vno-Mu-I-unsplash.jpg' alt='' />
             <div className='absolute top-0 right-0 bg-black text-white p-2'>

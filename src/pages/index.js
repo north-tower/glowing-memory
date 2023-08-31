@@ -14,6 +14,7 @@ import Team from '@/components/Team'
 import Stats from '@/components/Stats'
 import LargeCard from '@/components/LargeCard'
 import Services from '@/components/Services'
+import Query from '@/components/Query'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -51,8 +52,9 @@ export default function Home({ products, projects }) {
       
         <ProductFeed products={products} />
 
-     
-     
+        <h3 className='text-3xl m-3'>Have Any Query</h3>
+
+        <Query />
 
       </section>
 
