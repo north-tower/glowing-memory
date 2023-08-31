@@ -2,7 +2,7 @@ import React from 'react'
 
 function Query() {
   return (
-    <div>
+    <div className='max-w-md mx-auto'>
         <p className='p-2'>
         Have Further Query <br />
 Feel free to ask any query related to events

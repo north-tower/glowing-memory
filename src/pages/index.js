@@ -22,7 +22,7 @@ export default function Home({ products, projects }) {
   return (
     <div className='bg-gray-100 '>
       <Head>
-        <title>Amazon 2.0</title>
+        <title>Carlsche Limited</title>
       </Head>
       
       <Header />
@@ -30,7 +30,7 @@ export default function Home({ products, projects }) {
       <Banner />
 
       <section className='max-w-screen-lg mx-auto'>
-        <h3 className='text-3xl m-3 '>About Us</h3>
+        <h3 className='text-3xl m-3 text-center'>About Us</h3>
           <Stats />
       </section>
       <LargeCard img="https://links.papareact.com/4cj" 
@@ -40,19 +40,20 @@ export default function Home({ products, projects }) {
         buttonText="Start a project" />
 
       <section className='max-w-screen-lg mx-auto'>
-        <h3 className='text-3xl m-3 '>Our Services</h3>
+        <h3 className='text-3xl m-3 text-center'>Our Services</h3>
 
         <Services />
-        <h3 className='text-3xl m-3'>Our Team</h3>
+        <h3 className='text-3xl m-3 text-center'>Our Team</h3>
+
 
         <Team />
 
         
-        <h3 className='text-3xl m-3'>Our Projects</h3>
+        <h3 className='text-3xl m-3 text-center'>Our Projects</h3>
       
         <ProductFeed products={products} />
 
-        <h3 className='text-3xl m-3'>Have Any Query</h3>
+        <h3 className='text-3xl m-3 text-center'>Have Any Query</h3>
 
         <Query />
 
@@ -64,17 +65,3 @@ export default function Home({ products, projects }) {
 }
 
 
-export async function getServerSideProps(context) {
-
-  const products = await fetch("https://www.jsonkeeper.com/b/KZR6").then(
-    (res) => res.json()
-  );
-  const projects = await fetch("https://www.jsonkeeper.com/b/KZR6").then(
-    (res) => res.json()
-  );
-    return {
-      props : {
-      products, projects
-    },
-  };
-}
