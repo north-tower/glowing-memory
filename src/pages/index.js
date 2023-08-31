@@ -18,7 +18,7 @@ import Query from '@/components/Query'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ products, projects }) {
+export default function Home({ products }) {
   return (
     <div className='bg-gray-100 '>
       <Head>
@@ -65,3 +65,15 @@ export default function Home({ products, projects }) {
 }
 
 
+export async function getServerSideProps(context) {
+
+  const products = await fetch("https://www.jsonkeeper.com/b/KZR6").then(
+    (res) => res.json()
+  );
+ 
+    return {
+      props : {
+      products
+    },
+  };
+}
