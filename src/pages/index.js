@@ -23,9 +23,13 @@ export default function Home({ products, projects }) {
       </Head>
       
       <Header />
-      <Banner />
+
 
       <main className='max-w-screen-lg mx-auto'>
+      <Banner />
+      <h3 className='text-3xl m-3'>About Us</h3>
+
+<Stats />
         
         <h3 className='text-3xl m-3'>Recent Projects</h3>
       
@@ -34,9 +38,7 @@ export default function Home({ products, projects }) {
         <h3 className='text-3xl m-3'>Ongoing Projects</h3>
       
       <OnProject projects={projects} />
-      <h3 className='text-3xl m-3'>About Us</h3>
-
-      <Stats />
+     
       <h3 className='text-3xl m-3'>Our Team</h3>
 
       <Team />
