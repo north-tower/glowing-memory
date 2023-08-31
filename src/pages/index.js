@@ -39,22 +39,20 @@ export default function Home({ products, projects }) {
         buttonText="Start a project" />
 
       <section className='max-w-screen-lg mx-auto'>
-      <h3 className='text-3xl m-3 '>Our Services</h3>
+        <h3 className='text-3xl m-3 '>Our Services</h3>
 
         <Services />
+        <h3 className='text-3xl m-3'>Our Team</h3>
+
+        <Team />
 
         
-        <h3 className='text-3xl m-3'>Recent Projects</h3>
+        <h3 className='text-3xl m-3'>Our Projects</h3>
       
         <ProductFeed products={products} />
 
-        <h3 className='text-3xl m-3'>Ongoing Projects</h3>
-      
-      <OnProject projects={projects} />
      
-      <h3 className='text-3xl m-3'>Our Team</h3>
-
-      <Team />
+     
 
       </section>
 

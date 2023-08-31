@@ -9,7 +9,8 @@ export default function Product({id, title, price, description , category, image
   
     
     return (
-         <div class="flex flex-wrap justify-between pt-6 -mx-6 p-3">
+         <div class="flex flex-wrap justify-between pt-6 -mx-6 p-3 cursor-pointer hover:scale-105 transform transition
+         duration-300 ease-out">
             <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
                     <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                         <Link href={`/project/${id}`} class="flex flex-wrap no-underline hover:no-underline">

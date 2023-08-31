@@ -3,7 +3,8 @@ import React from 'react'
 function Services() {
   return (
     <div className='flex flex-row items-center justify-between ' >
-        <div class="block max-w-sm p-6 bg-white rounded-lg shadow hover:bg-red-200 m-2">
+        <div class="block max-w-sm p-6 bg-white rounded-lg shadow hover:bg-red-200 m-2 cursor-pointer hover:scale-105 transform transition
+     duration-300 ease-out">
             <div className='flex flex-row items-center justify-between '  >
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">General Contracting </h5>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-buildings text-red-400" viewBox="0 0 16 16">
@@ -13,7 +14,8 @@ function Services() {
             </div>
             <p class="font-normal ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
         </div>
-        <div class="block max-w-sm p-6 bg-white rounded-lg shadow hover:bg-red-200 m-2">
+        <div class="block max-w-sm p-6 bg-white rounded-lg shadow hover:bg-red-200 m-2 cursor-pointer hover:scale-105 transform transition
+     duration-300 ease-out">
             <div className='flex flex-row items-center justify-between'  >
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Infrastructure Works </h5>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-buildings text-red-400" viewBox="0 0 16 16">
@@ -23,7 +25,8 @@ function Services() {
             </div>
             <p class="font-normal ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
         </div>
-        <div class="block max-w-sm p-6 bg-white rounded-lg shadow hover:bg-red-200 m-2">
+        <div class="block max-w-sm p-6 bg-white rounded-lg shadow hover:bg-red-200 m-2 cursor-pointer hover:scale-105 transform transition
+     duration-300 ease-out">
             <div className='flex flex-row items-center justify-between'  >
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Civil Works</h5>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-buildings text-red-400" viewBox="0 0 16 16">
