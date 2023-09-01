@@ -5,11 +5,9 @@ import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
 import ProductFeed from '@/components/ProductFeed'
-import { getSession } from 'next-auth/react'
+
 import Footer from '../components/Footer'
-import Product from '@/components/Product'
-import Title from '@/components/Team'
-import OnProject from '@/components/OnProject'
+
 import Team from '@/components/Team'
 import Stats from '@/components/Stats'
 import LargeCard from '@/components/LargeCard'
@@ -18,7 +16,7 @@ import Query from '@/components/Query'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ products }) {
+export default function Home({ products, cardsData }) {
   return (
     <div className='bg-gray-100 '>
       <Head>
@@ -40,13 +38,24 @@ export default function Home({ products }) {
         buttonText="Start a project" />
 
       <section className='max-w-screen-lg mx-auto'>
-        <h3 className='text-3xl m-3 text-center'>Our Services</h3>
+        <section>
+          <h2 className='text-4xl font-semibold py-8 text-center'>Services</h2>
 
-        <Services />
-        <h3 className='text-3xl m-3 text-center'>Our Team</h3>
+          <div className='flex space-x-3 overflow-scroll scrollbar-hide no-scrollbar p-3 -ml-3'>
+          {cardsData?.map(({img, title , description} )=> (
+            <Services key={title} description={description} title={title}  />
+          ))}
+          </div>
+        </section>
+        <section>
+          <h2 className='text-4xl font-semibold py-8 text-center'>Our Team</h2>
 
-
-        <Team />
+          <div className='flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3'>
+          {cardsData?.map(({img, title} )=> (
+            <Team key={img} img={img} title={title} />
+          ))}
+          </div>
+        </section>
 
         
         <h3 className='text-3xl m-3 text-center'>Our Projects</h3>
@@ -65,15 +74,18 @@ export default function Home({ products }) {
 }
 
 
-export async function getServerSideProps(context) {
+export async function getStaticProps() {
 
   const products = await fetch("https://www.jsonkeeper.com/b/KZR6").then(
     (res) => res.json()
   );
+  const cardsData  = await fetch("https://www.jsonkeeper.com/b/QDW2").then(
+    (res) => res.json()
+  )
  
     return {
       props : {
-      products
+      products, cardsData
     },
   };
 }
