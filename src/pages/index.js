@@ -13,10 +13,11 @@ import Stats from '@/components/Stats'
 import LargeCard from '@/components/LargeCard'
 import Services from '@/components/Services'
 import Query from '@/components/Query'
+import OnProject from '@/components/OnProject'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ products, cardsData, teamData }) {
+export default function Home({ projects, cardsData, teamData }) {
   return (
     <div className='bg-gray-100 '>
       <Head>
@@ -41,7 +42,7 @@ export default function Home({ products, cardsData, teamData }) {
         <section>
           <h2 className='text-4xl font-semibold py-8 text-center'>Services</h2>
 
-          <div className='flex space-x-3 overflow-scroll scrollbar-hide no-scrollbar p-3 -ml-3'>
+          <div className='flex space-x-3 overflow-scroll scrollbar-none p-3 -ml-3'>
           {cardsData?.map(({img, title , description} )=> (
             <Services key={title} description={description} title={title}  />
           ))}
@@ -50,7 +51,7 @@ export default function Home({ products, cardsData, teamData }) {
         <section>
           <h2 className='text-4xl font-semibold py-8 text-center'>Our Team</h2>
 
-          <div className='flex space-x-3 lg:overflow-hidden md:flex-row scrollbar-hide p-3 -ml-3'>
+          <div className='flex space-x-3 overflow-hidden scrollbar-hide p-3 -ml-3'>
           {teamData?.map(({img, title, name} )=> (
             <Team key={img} img={img} title={title}  name={name} />
           ))}
@@ -58,9 +59,15 @@ export default function Home({ products, cardsData, teamData }) {
         </section>
 
         
-        <h3 className='text-3xl m-3 text-center'>Our Projects</h3>
-      
-        <ProductFeed products={products} />
+        <section>
+          <h2 className='text-4xl font-semibold py-8 text-center'>Projects</h2>
+
+          <div className='flex space-x-3 overflow-scroll scrollbar-none p-3 -ml-3'>
+          {projects?.map(({image, title ,description, id} )=> (
+            <OnProject key={id} description={description} title={title} image={image}  id={id}  />
+          ))}
+          </div>
+        </section>
 
         <h3 className='text-3xl m-3 text-center'>Have Any Query</h3>
 
@@ -76,7 +83,7 @@ export default function Home({ products, cardsData, teamData }) {
 
 export async function getStaticProps() {
 
-  const products = await fetch("https://www.jsonkeeper.com/b/KZR6").then(
+  const projects = await fetch("https://www.jsonkeeper.com/b/YFSV").then(
     (res) => res.json()
   );
   const cardsData  = await fetch("https://www.jsonkeeper.com/b/QDW2").then(
@@ -88,7 +95,7 @@ export async function getStaticProps() {
   )
     return {
       props : {
-      products, cardsData, teamData
+      projects, cardsData, teamData
     },
   };
 }

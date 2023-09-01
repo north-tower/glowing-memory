@@ -172,7 +172,7 @@ function ProjectPage({ products }) {
 export default ProjectPage
 export async function getServerSideProps(context) {
   
-    const products = await fetch("https://www.jsonkeeper.com/b/KZR6").then(
+    const products = await fetch("https://www.jsonkeeper.com/b/YFSV").then(
       (res) => res.json()
     );
       return {
