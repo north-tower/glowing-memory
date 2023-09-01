@@ -10,7 +10,7 @@ function OnProject({ image, title , id}) {
         <div className='relative h-80 w-80' >
             <Image src={image} layout='fill' className='rounded-xl' />
         </div>
-        <h3 className='text-2xl mt-3'>{title}</h3>
+        <h3 className='text-2xl mt-3 hover:text-red-500'>{title}</h3>
         </Link>
         
     </div>

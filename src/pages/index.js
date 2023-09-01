@@ -69,9 +69,12 @@ export default function Home({ projects, cardsData, teamData }) {
           </div>
         </section>
 
-        <h3 className='text-3xl m-3 text-center'>Have Any Query</h3>
-
+        <section>
+        <h2 className='text-4xl font-semibold py-8 text-center'>Have any query</h2>
         <Query />
+
+        </section>
+
 
       </section>
 

@@ -19,7 +19,7 @@ function Header() {
    
 <nav class="bg-white border-gray-200 dark:bg-white dark:border-gray-700" >
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a  class="flex items-center" onClick={() => router.push("/")}>
+    <a  class="flex items-center cursor-pointer" onClick={() => router.push("/")} >
         <img src="https://carlsche.co.ke/wp-content/uploads/2023/08/cropped-mylogo.png" class="h-16 mr-3" alt="Flowbite Logo" />
         
     </a>
