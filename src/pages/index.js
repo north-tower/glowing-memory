@@ -16,7 +16,7 @@ import Query from '@/components/Query'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ products, cardsData }) {
+export default function Home({ products, cardsData, teamData }) {
   return (
     <div className='bg-gray-100 '>
       <Head>
@@ -50,9 +50,9 @@ export default function Home({ products, cardsData }) {
         <section>
           <h2 className='text-4xl font-semibold py-8 text-center'>Our Team</h2>
 
-          <div className='flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3'>
-          {cardsData?.map(({img, title} )=> (
-            <Team key={img} img={img} title={title} />
+          <div className='flex space-x-3 lg:overflow-hidden md:flex-row scrollbar-hide p-3 -ml-3'>
+          {teamData?.map(({img, title, name} )=> (
+            <Team key={img} img={img} title={title}  name={name} />
           ))}
           </div>
         </section>
@@ -82,10 +82,13 @@ export async function getStaticProps() {
   const cardsData  = await fetch("https://www.jsonkeeper.com/b/QDW2").then(
     (res) => res.json()
   )
- 
+  
+  const teamData  = await fetch("https://www.jsonkeeper.com/b/S5NW").then(
+    (res) => res.json()
+  )
     return {
       props : {
-      products, cardsData
+      products, cardsData, teamData
     },
   };
 }
