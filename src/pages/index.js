@@ -1,13 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
-import ProductFeed from '@/components/ProductFeed'
-
 import Footer from '../components/Footer'
-
 import Team from '@/components/Team'
 import Stats from '@/components/Stats'
 import LargeCard from '@/components/LargeCard'
@@ -15,8 +10,7 @@ import Services from '@/components/Services'
 import Query from '@/components/Query'
 import OnProject from '@/components/OnProject'
 import Testimonial from '@/components/Testimonial'
-
-const inter = Inter({ subsets: ['latin'] })
+import Blog from '@/components/Blog'
 
 export default function Home({ projects, cardsData, teamData, testimonial }) {
   return (
@@ -78,15 +72,19 @@ export default function Home({ projects, cardsData, teamData, testimonial }) {
 
 
         <section>
-        <h2 className='text-4xl font-semibold py-8 text-center'>Testimonials</h2>
+          <h2 className='text-4xl font-semibold py-8 text-center'>Testimonials</h2>
 
-        <div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2">
-        {testimonial?.map(({ role,name,description, leading }) => (
-        <Testimonial key={name} name={name} role={role} description={description} leading={leading} />
-        )     )}
-        </div>
-       
-       
+          <div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2">
+          {testimonial?.map(({ role,name,description, leading }) => (
+          <Testimonial key={name} name={name} role={role} description={description} leading={leading} />
+          )     )}
+          </div>
+        </section>
+
+        <section className='p-2'>
+        <h2 className='text-4xl font-semibold py-8 text-center'>From our blog</h2>
+
+        <Blog />
 
         </section>
 
