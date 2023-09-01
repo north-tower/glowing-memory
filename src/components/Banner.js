@@ -19,7 +19,7 @@ function Banner() {
 
             <img loading='lazy' src='https://i.postimg.cc/7ZnT3wm6/11.jpg' alt='' />
             <div className='absolute top-72 left-10 text-white p-2 '>
-             <h1 className='text-4xl font-extrabold'>BUILDING YOUR DREAM TOGETHER</h1> 
+             <h1 className='text-4xl font-bold'>BUILDING YOUR DREAM TOGETHER</h1> 
              
              <div className='p-4 '>
              <button type="button" class="text-white bg-blue-700 m-2
@@ -46,7 +46,7 @@ function Banner() {
           <div className='relative'>
             <img loading='lazy' src='https://i.postimg.cc/fRN9SJ7p/12.jpg' alt='' />
             <div className='absolute top-72 left-10 text-white p-2 '>
-             <h1 className='text-4xl font-extrabold'>AMAZING CONSTRUCTION THEME</h1> 
+             <h1 className='text-4xl font-bold'>AMAZING CONSTRUCTION THEME</h1> 
      
              <div className='p-4 '>
              <button type="button" class="text-white bg-blue-700 m-2

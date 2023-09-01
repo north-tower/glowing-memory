@@ -14,10 +14,11 @@ import LargeCard from '@/components/LargeCard'
 import Services from '@/components/Services'
 import Query from '@/components/Query'
 import OnProject from '@/components/OnProject'
+import Testimonial from '@/components/Testimonial'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ projects, cardsData, teamData }) {
+export default function Home({ projects, cardsData, teamData, testimonial }) {
   return (
     <div className='bg-gray-100 '>
       <Head>
@@ -76,6 +77,20 @@ export default function Home({ projects, cardsData, teamData }) {
         </section>
 
 
+        <section>
+        <h2 className='text-4xl font-semibold py-8 text-center'>Testimonials</h2>
+
+        <div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2">
+        {testimonial?.map(({ role,name,description, leading }) => (
+        <Testimonial key={name} name={name} role={role} description={description} leading={leading} />
+        )     )}
+        </div>
+       
+       
+
+        </section>
+
+
       </section>
 
       <Footer />
@@ -96,9 +111,13 @@ export async function getStaticProps() {
   const teamData  = await fetch("https://www.jsonkeeper.com/b/S5NW").then(
     (res) => res.json()
   )
+  const testimonial  = await fetch("https://www.jsonkeeper.com/b/5Z1E").then(
+    (res) => res.json()
+  )
+  
     return {
       props : {
-      projects, cardsData, teamData
+      projects, cardsData, teamData, testimonial
     },
   };
 }
