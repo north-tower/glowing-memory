@@ -106,7 +106,7 @@ export async function getStaticProps() {
     (res) => res.json()
   )
   
-  const teamData  = await fetch("https://www.jsonkeeper.com/b/S5NW").then(
+  const teamData  = await fetch("https://www.jsonkeeper.com/b/5H9Q").then(
     (res) => res.json()
   )
   const testimonial  = await fetch("https://www.jsonkeeper.com/b/5Z1E").then(
