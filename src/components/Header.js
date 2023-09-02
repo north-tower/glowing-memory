@@ -35,18 +35,17 @@ function Header() {
       md:border-0 md:bg-white dark:bg-white md:dark:bg-white dark:border-red-700">
         <li>
           <a  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-red-500
-           md:p-0 md:dark:text-red-500 md:dark:bg-transparent" aria-current="page">Home</a>
+           md:p-0 md:dark:text-red-500 md:dark:bg-transparent cursor-pointer" onClick={() => router.push("/")} aria-current="page">Home</a>
         </li>
        
         <li>
           <a   onClick={() => router.push("/project")} class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:dark
-          md:p-0 dark:text-black
-           md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+          md:p-0 dark:text-black cursor-pointer md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
         </li>
         <li>
           <a  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-500
            md:p-0 dark:text-black
-           md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+           md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent cursor-pointer" onClick={() => router.push("/about")}>About</a>
         </li>
         <li>
           <a  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-500 md:p-0 dark:text-black

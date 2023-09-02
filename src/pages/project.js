@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '@/components/Header'
 import MediumCard from '@/components/MediumCard'
 import Footer from '@/components/Footer'
+import OnProject from '@/components/OnProject'
 
 
 function project({ products }) {
@@ -14,8 +15,8 @@ function project({ products }) {
           <h2 className='text-4xl font-semibold py-8'>All Projects</h2>
 
           <div className='flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3'>
-          {products?.map(({image, title, id} )=> (
-            <MediumCard key={image} img={image} title={title} id={id}  />
+          {products?.map(({image, title, id, rating} )=> (
+            <OnProject key={image} image={image} title={title} id={id} rating={rating} />
           ))}
           </div>
         </section>
@@ -30,7 +31,7 @@ export default project
 
 export async function getServerSideProps(context) {
 
-  const products = await fetch("https://www.jsonkeeper.com/b/YFSV").then(
+  const products = await fetch("https://www.jsonkeeper.com/b/NSKN").then(
     (res) => res.json()
   );
  

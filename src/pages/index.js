@@ -14,7 +14,7 @@ import Blog from '@/components/Blog'
 
 export default function Home({ projects, cardsData, teamData, testimonial }) {
   return (
-    <div className='bg-gray-100 '>
+    <div className='bg-gray-100'>
       <Head>
         <title>Carlsche Limited</title>
       </Head>
@@ -58,8 +58,8 @@ export default function Home({ projects, cardsData, teamData, testimonial }) {
           <h2 className='text-4xl font-semibold py-8 text-center'>Projects</h2>
 
           <div className='flex space-x-3 overflow-scroll scrollbar-none p-3 -ml-3'>
-          {projects?.map(({image, title ,description, id} )=> (
-            <OnProject key={id} description={description} title={title} image={image}  id={id}  />
+          {projects?.map(({image, title ,description, id , rating} )=> (
+            <OnProject key={id} description={description} title={title} image={image}  id={id}  rating={rating} />
           ))}
           </div>
         </section>
@@ -99,7 +99,7 @@ export default function Home({ projects, cardsData, teamData, testimonial }) {
 
 export async function getStaticProps() {
 
-  const projects = await fetch("https://www.jsonkeeper.com/b/YFSV").then(
+  const projects = await fetch("https://www.jsonkeeper.com/b/NSKN").then(
     (res) => res.json()
   );
   const cardsData  = await fetch("https://www.jsonkeeper.com/b/QDW2").then(
