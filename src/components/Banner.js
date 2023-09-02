@@ -13,12 +13,15 @@ function Banner() {
       title: 'BUILDING YOUR DREAM TOGETHER',
       buttonText1: 'About',
       buttonText2: 'Services',
+      route: "about"
+
     },
     {
       imageSrc: 'https://i.postimg.cc/fRN9SJ7p/12.jpg',
       title: 'AMAZING CONSTRUCTION THEME',
       buttonText1: 'Request a quote',
       buttonText2: 'Contact us',
+      route: "contact"
     },
   ];
 
@@ -41,14 +44,14 @@ function Banner() {
               <div className='p-4 space-x-4'>
                 <button
                   type="button"
-                  onClick={() => router.push("/about")}
-                  className="banner-button"
+                  onClick={() => router.push(`/${item.route}`)}
+                  className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
                 >
                   {item.buttonText1}
                 </button>
                 <button
                   type="button"
-                  className="banner-button"
+                  className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                 >
                   {item.buttonText2}
                 </button>
