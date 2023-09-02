@@ -1,6 +1,9 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 
+
 function Footer() {
+    const router = useRouter()
   return (
     <div>
         
@@ -11,7 +14,7 @@ function Footer() {
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
-                    <a href="#" class=" hover:underline">About</a>
+                    <a  onClick={() => router.push("/about")}  class=" hover:underline">About</a>
                 </li>
                 <li class="mb-4">
                     <a href="#" class="hover:underline">Careers</a>
@@ -59,10 +62,10 @@ function Footer() {
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
-                    <a href="#" class="hover:underline">iOS</a>
+                    <a href="#" class="hover:underline">All projects</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" class="hover:underline">Android</a>
+                    <a href="#" class="hover:underline">Quotes</a>
                 </li>
                 <li class="mb-4">
                     <a href="#" class="hover:underline">Windows</a>

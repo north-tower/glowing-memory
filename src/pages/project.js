@@ -3,6 +3,7 @@ import Header from '@/components/Header'
 import MediumCard from '@/components/MediumCard'
 import Footer from '@/components/Footer'
 import OnProject from '@/components/OnProject'
+import Query from '@/components/Query'
 
 
 function project({ products }) {
@@ -19,7 +20,8 @@ function project({ products }) {
             <OnProject key={image} image={image} title={title} id={id} rating={rating} />
           ))}
           </div>
-        </section>
+          <Query />
+    </section>
         <Footer />
 </div>
 

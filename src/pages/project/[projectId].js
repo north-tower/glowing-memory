@@ -7,6 +7,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import productFeed from '@/components/ProductFeed';
 import ProductFeed from '@/components/ProductFeed';
+import Query from '@/components/Query';
 
 
 function ProjectPage({ products }) {
@@ -23,7 +24,7 @@ function ProjectPage({ products }) {
         <Header />
           <div className='max-w-screen-lg mx-auto'>
         <div class="carousel relative container mx-auto m-5"  >
-    <p class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl p-3 m-2 " href="#">
+    <p class="uppercase  no-underline hover:no-underline font-bold text-gray-800 text-xl p-3 m-2 " href="#">
         Project Description
     </p>
     <div class=" p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -41,7 +42,7 @@ function ProjectPage({ products }) {
     </div>
     </div>
 
-    <p class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl p-3 m-2 " href="#">
+    <p class="uppercase no-underline hover:no-underline font-bold text-gray-800 text-xl p-3 m-2 " href="#">
             Project Timeline
         </p>
         
@@ -159,6 +160,8 @@ function ProjectPage({ products }) {
    </div>
     ))} */}
     <ProductFeed products={products}/>
+
+    <Query />
    
  
 

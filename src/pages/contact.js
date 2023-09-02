@@ -1,6 +1,5 @@
 import React from 'react'
-import  {PhoneIcon, MapPinIcon , EnvelopeIcon } from "@heroicons/react/24/solid"
-
+import { MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/solid'
 function contact() {
   return (
     <div>
