@@ -46,7 +46,8 @@ export default function Home({ projects, cardsData, teamData, testimonial }) {
         <section>
           <h2 className='text-4xl font-semibold py-8 text-center'>Our Team</h2>
 
-          <div className='flex space-x-3 overflow-hidden scrollbar-hide p-3 -ml-3'>
+    <div className='flex flex-wrap justify-between '>
+          
           {teamData?.map(({img, title, name} )=> (
             <Team key={img} img={img} title={title}  name={name} />
           ))}

@@ -20,7 +20,7 @@ function ProjectPage({ products }) {
 
 
   return (
-    <div className=''>
+    <div className='m-2'>
         <Header />
           <div className='max-w-screen-lg mx-auto'>
         <div class="carousel relative container mx-auto m-5"  >
