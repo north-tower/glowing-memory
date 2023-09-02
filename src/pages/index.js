@@ -14,7 +14,7 @@ import Blog from '@/components/Blog'
 
 export default function Home({ projects, cardsData, teamData, testimonial }) {
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-gray-100' style={{ height: '100vh', overflow: 'auto' }}>
       <Head>
         <title>Carlsche Limited</title>
       </Head>
@@ -46,8 +46,7 @@ export default function Home({ projects, cardsData, teamData, testimonial }) {
         <section>
           <h2 className='text-4xl font-semibold py-8 text-center'>Our Team</h2>
 
-    <div className='flex flex-wrap justify-between '>
-          
+          <div className='flex space-x-3 overflow-hidden scrollbar-hide p-3 -ml-3'>
           {teamData?.map(({img, title, name} )=> (
             <Team key={img} img={img} title={title}  name={name} />
           ))}
@@ -107,7 +106,7 @@ export async function getStaticProps() {
     (res) => res.json()
   )
   
-  const teamData  = await fetch("https://www.jsonkeeper.com/b/5H9Q").then(
+  const teamData  = await fetch("https://www.jsonkeeper.com/b/S5NW").then(
     (res) => res.json()
   )
   const testimonial  = await fetch("https://www.jsonkeeper.com/b/5Z1E").then(
