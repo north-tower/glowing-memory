@@ -1,8 +1,5 @@
 import React from 'react';
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/outline";
-import { useForm, SubmitHandler } from "react-hook-form";
-
-
 
 export default function Contact() {
 
