@@ -1,4 +1,0 @@
-{"web":{"client_id":"807691893449-9ri4omv6efbufu6uk5lq5gdmki39g7fd.apps.googleusercontent.com","project_id":"curly-couscous-3ebee"
-,"auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":
-"https://www.googleapis.com/oauth2/v1/certs","client_secret":"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","redirect_uris":["https://train-amazon.vercel.app/api/auth/callback/google"],
-"javascript_origins":["https://train-amazon.vercel.app"]}}
