@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '@/components/Header'
-import MediumCard from '@/components/MediumCard'
 import Footer from '@/components/Footer'
 import OnProject from '@/components/OnProject'
 import Query from '@/components/Query'

@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import React from 'react'
-import { useRouter } from 'next/router'
 import MainMap from '@/components/MainMap'
 import Footer from '@/components/Footer'
 
